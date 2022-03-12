@@ -20,3 +20,9 @@ I have defined a function that take the year value, the function returns if this
 ## Perfect Sequence:
 I have defined a function that take array, the function returns if this array have a Perfect Sequence or not
 ![image](Image/Ch03.JPG)
+
+
+
+## Sum of Rows:
+I have defined a function that take 2D array, the function returns the sum for each rows inside an array
+![image](Image/CH04.JPG)
