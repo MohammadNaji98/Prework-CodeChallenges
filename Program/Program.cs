@@ -48,6 +48,26 @@ namespace Program
             else
                 return "This is not a Perfect Sequence Array";
         }
+        static int[] SumOfRows(int[,]arr,int i , int j)
+        {
+            int[] returnArr = new int[i];
+            int sum;
+            for(int c=0;c<i;c++)
+            {
+                sum = 0;
+                for(int c2=0;c2<j;c2++)
+                {
+                    sum += arr[c, c2];
+                    if (c2 == j - 1)
+                    {
+                        returnArr[c] = sum;
+                    }
+                        
+                }
+                
+            }
+            return returnArr;
+        }
         static void Main(string[] args)
         {
 
@@ -114,6 +134,15 @@ namespace Program
                 arrTest[i] = int.Parse(Console.ReadLine());
             }
             Console.WriteLine(PerfectSequence(arrTest));
+
+            // Challeange04
+            int[,] myArray = new int[3, 5] { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+            int[] returnArr =SumOfRows(myArray, 3, 5);
+            for (int i = 0; i < returnArr.Length; i++)
+            {
+                Console.Write(returnArr[i] + " ");
+            }
+
         }
     }
 }
