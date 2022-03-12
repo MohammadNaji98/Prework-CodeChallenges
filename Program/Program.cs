@@ -29,6 +29,25 @@ namespace Program
             }
             else return "This year " + year + " is not Leap";
         }
+        static string PerfectSequence(int[] arr)
+        {
+            int sum = 0;
+            int mult=1;
+            for(int i=0;i<arr.Length;i++)
+            {
+                if (arr[i] > 0) {
+                    sum += arr[i];
+                    mult *= arr[i];
+                }
+                else return "This is not a Perfect Sequence Array";
+
+
+            }
+            if (sum == mult)
+                return "This is a Perfect Sequence Array";
+            else
+                return "This is not a Perfect Sequence Array";
+        }
         static void Main(string[] args)
         {
 
@@ -87,6 +106,14 @@ namespace Program
             year = int.Parse(Console.ReadLine());
             Console.WriteLine(LeapYearCalculator(year));
 
+            // Challeange03
+            int[] arrTest = new int[3];
+            Console.WriteLine("Please enter the array item :");
+            for (int i=0;i<arrTest.Length;i++)
+            {
+                arrTest[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(PerfectSequence(arrTest));
         }
     }
 }
