@@ -4,18 +4,35 @@ namespace Program
 {
     class Program
     {
-        static int ArrayMaxResult(int[] arr,int SelectValue)
+        static int ArrayMaxResult(int[] arr,int selectValue)
         {
             int count = 0;
             for(int i=0;i<arr.Length;i++)
             {
-                if (arr[i] == SelectValue)
+                if (arr[i] == selectValue)
                     count++;
             }
-            return SelectValue * count;
+            return selectValue * count;
+        }
+        static string LeapYearCalculator(int year)
+        {
+            if(year%4==0)
+            {
+                if (year % 100 == 0)
+                {
+                    if(year%400==0)
+                    return "This year " + year + " is Leap";
+                    else return "This year " + year + " is not Leap";
+
+                }
+                else return "This year " + year + " is Leap";
+            }
+            else return "This year " + year + " is not Leap";
         }
         static void Main(string[] args)
         {
+
+            // Challeange01 
             int[] arr=new int[5];
             int select;
             int addItem;
@@ -44,6 +61,7 @@ namespace Program
             {
                 Console.Write(arr[i]+" ");
             }
+            Console.WriteLine("");
             //check if the number inside the array
                 try
                 {
@@ -55,15 +73,19 @@ namespace Program
                 else throw new Exception("not inside the array");
 
 
-
+               
                 }
                 catch(Exception e)
                 {
                 Console.WriteLine(e.Message);
             }
-           
 
 
+            // Challeange02
+            int year;
+            Console.WriteLine("Please enter the year :");
+            year = int.Parse(Console.ReadLine());
+            Console.WriteLine(LeapYearCalculator(year));
 
         }
     }
