@@ -13,3 +13,10 @@ I have defined a function that takes an array and a selected number from the arr
 ## Leap Year Calculator:
 I have defined a function that take the year value, the function returns if this year is leap or not
 ![image](Image/Leap.JPG)
+
+
+
+
+## Perfect Sequence:
+I have defined a function that take array, the function returns if this array have a Perfect Sequence or not
+![image](Image/Ch03.JPG)
